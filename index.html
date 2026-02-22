@@ -135,8 +135,8 @@ PRODUCT TEMPLATE END -->
 <h3>Elegant Shorts</h3>
 <div class="price">€ | $ | £ — DM for price</div>
 <div class="whatsapp-buttons">
-<a href="https://wa.me/36708856190" target="_blank">Order – Now </a>
-<a href="https://wa.me/966500821680" target="_blank">Order – Chat </a>
+<a href="https://wa.me/36708856190" target="_blank">Order – Hungary Line</a>
+<a href="https://wa.me/966500821680" target="_blank">Order – Saudi Line</a>
 </div>
 </div>
 </div>
@@ -154,6 +154,37 @@ KOSABE is a curated luxury soft glam fashion brand designed for confident, femin
 <footer>
 © 2026 KOSABE — All Rights Reserved
 </footer>
+
+
+
+<!-- ===== LUXURY IMAGE GALLERY SCRIPT ===== -->
+<style>
+.gallery-thumbs{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin-top:10px;
+}
+.gallery-thumbs img{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:10px;
+  cursor:pointer;
+  border:2px solid #eee;
+  transition:all 0.3s ease;
+}
+.gallery-thumbs img:hover{
+  border:2px solid #c6a75e;
+  transform:scale(1.05);
+}
+</style>
+
+<script>
+function changeImage(mainId, newSrc){
+  document.getElementById(mainId).src = newSrc;
+}
+</script>
 
 </body>
 </html>
