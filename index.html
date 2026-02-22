@@ -74,7 +74,6 @@ box-shadow:0 8px 20px rgba(0,0,0,0.08);
 transition:0.3s;
 position:relative;
 }
-
 .card:hover{transform:translateY(-8px)}
 
 .card img{
@@ -206,6 +205,7 @@ color:white;
 <nav>
 <button onclick="filterCategory('all')" class="filter-btn">All</button>
 <button onclick="filterCategory('heels')" class="filter-btn">Heels</button>
+<button onclick="filterCategory('sneakers')" class="filter-btn">Sneakers</button>
 </nav>
 
 <header>
@@ -214,16 +214,13 @@ color:white;
 </header>
 
 <section class="section">
-<h2>High Heels Collection</h2>
+<h2>Collection</h2>
 
 <div class="grid">
 
-<!-- ================= KSB-01 ================= -->
-
+<!-- ================= KSB-01 HEELS ================= -->
 <div class="card heels">
-
 <div class="badge">Limited Piece</div>
-
 <img id="ksb01-main" src="20250307_213805.jpg">
 
 <div class="gallery-thumbs">
@@ -237,24 +234,43 @@ color:white;
 </div>
 
 <div class="card-content">
-
 <h3 data-code="KSB-01">KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
-
-<div class="product-info">
-17cm sculpted gold stiletto • High-gloss platform base • Noir glitter finish
-</div>
-
+<div class="product-info">17cm sculpted gold stiletto • Noir glitter finish</div>
 <div>
-<span class="size-option">Size 40</span>
-<span class="size-option">Size 41</span>
+<span class="size-option">40</span>
+<span class="size-option">41</span>
+</div>
+<div class="stock">Only 1 pair available</div>
+<button class="select-product">Select Product</button>
+<div class="price">€ | $ | £ — DM for price</div>
+</div>
 </div>
 
-<div class="stock">Only 1 pair available</div>
+<!-- ================= KSB-02 SNEAKERS ================= -->
+<div class="card sneakers">
+<div class="badge">Sport Luxe</div>
+<img id="ksb02-main" src="20250307_215307.jpg">
 
+<div class="gallery-thumbs">
+<img src="20250307_215307.jpg" onclick="changeImage('ksb02-main','20250307_215307.jpg')">
+<img src="20250307_215323.jpg" onclick="changeImage('ksb02-main','20250307_215323.jpg')">
+<img src="20250307_215345.jpg" onclick="changeImage('ksb02-main','20250307_215345.jpg')">
+<img src="20250307_215357.jpg" onclick="changeImage('ksb02-main','20250307_215357.jpg')">
+<img src="20250307_215407.jpg" onclick="changeImage('ksb02-main','20250307_215407.jpg')">
+<img src="20250307_215422.jpg" onclick="changeImage('ksb02-main','20250307_215422.jpg')">
+<img src="20250307_215435.jpg" onclick="changeImage('ksb02-main','20250307_215435.jpg')">
+<img src="20250307_215450.jpg" onclick="changeImage('ksb02-main','20250307_215450.jpg')">
+</div>
+
+<div class="card-content">
+<h3 data-code="KSB-02">KSB-02 | Neon Velocity Luxe Runners</h3>
+<div class="product-info">Lightweight performance sole • Graphic neon streak design</div>
+<div>
+<span class="size-option">35</span>
+<span class="size-option">36</span>
+</div>
 <button class="select-product">Select Product</button>
-
 <div class="price">€ | $ | £ — DM for price</div>
-
 </div>
 </div>
 
@@ -280,13 +296,11 @@ else{card.style.display=card.classList.contains(category)?'block':'none'}
 })
 }
 
-document.addEventListener("DOMContentLoaded",function(){
 document.querySelectorAll('.select-product').forEach(button=>{
 button.addEventListener('click',function(){
 const code=this.closest('.card').querySelector('h3').getAttribute('data-code');
 const message=`Hello KOSABE, I want to order product code ${code}`;
 window.open(`https://wa.me/36708856190?text=${encodeURIComponent(message)}`,'_blank');
-})
 })
 })
 </script>
