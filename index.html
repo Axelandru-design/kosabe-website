@@ -88,33 +88,40 @@ footer{background:#3a2e2e;color:white;text-align:center;padding:25px;margin-top:
 <!-- ================= ADD NEW PRODUCTS BELOW THIS LINE ================= -->
 
 <!--
-ULTRA BEGINNER MODE 👇
+NEW PRODUCT FORMAT (MULTIPLE IMAGES + CATEGORY READY)
 
-HOW TO ADD A PRODUCT (ONLY 3 THINGS TO CHANGE):
+HOW TO USE:
+1. Upload all product images first.
+2. Copy ONE full product block below.
+3. Change ONLY:
+   - category class (dresses / tops / jeans)
+   - image file names
+   - product code (KSB-01, KSB-02, etc.)
+   - unique main image id (ksb01-main, ksb02-main etc.)
 
-1. COPY everything from <div class="card"> to </div>
-2. PASTE it below the last product
-3. CHANGE ONLY:
-   - image file name (example: dress.jpg)
-   - product name (example: Silk Dress)
+EXAMPLE PRODUCT (READY TO COPY):
 
-DO NOT change anything else.
+<div class="card dresses">
 
-EXAMPLE READY-TO-USE PRODUCT:
+  <!-- MAIN IMAGE -->
+  <img id="ksb01-main" src="dress1a.jpg" alt="Silk Dress">
 
-<div class="card">
-  <img src="yourphoto.jpg" alt="New Product">
-  <div class="card-content">
-    <h3>New Product Name</h3>
-    <div class="price">€ | $ | £ — DM for price</div>
-    <div class="whatsapp-buttons">
-      <a href="https://wa.me/36708856190" target="_blank">Order Now</a>
-      <a href="https://wa.me/966500821680" target="_blank">Chat Now</a>
-    </div>
+  <!-- THUMBNAILS -->
+  <div class="gallery-thumbs">
+    <img src="dress1a.jpg" onclick="changeImage('ksb01-main','dress1a.jpg')">
+    <img src="dress1b.jpg" onclick="changeImage('ksb01-main','dress1b.jpg')">
+    <img src="dress1c.jpg" onclick="changeImage('ksb01-main','dress1c.jpg')">
   </div>
+
+  <div class="card-content">
+    <h3 data-code="KSB-01">KSB-01 | Silk Evening Dress</h3>
+    <button class="select-product">Select Product</button>
+    <div class="price">€ | $ | £ — DM for price</div>
+  </div>
+
 </div>
 
-END OF SIMPLE TEMPLATE
+END OF NEW TEMPLATE
 -->
 
 <!-- PRODUCT TEMPLATE START
