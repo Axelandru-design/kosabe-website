@@ -4,19 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>KOSABE | Luxury Soft Glam Fashion</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Poppins',sans-serif;background:#fff8f5;color:#3a2e2e}
-header{background:linear-gradient(135deg,#f6c1cf,#e8d8c3);padding:80px 20px;text-align:center}
-header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px}
+body{font-family:'Poppins',sans-serif;background:#fff8f5;color:#3a2e2e;padding-bottom:80px}
+
+header{
+  background:linear-gradient(135deg,#f6c1cf,#e8d8c3);
+  padding:100px 20px 80px;
+  text-align:center;
+  position:relative;
+}
+
+header h1{
+  font-family:'Playfair Display',serif;
+  font-size:42px;
+  letter-spacing:3px;
+}
+
 header p{margin-top:15px;font-size:18px}
-.btn{display:inline-block;margin-top:25px;padding:12px 28px;border-radius:40px;background:#c6a75e;color:white;text-decoration:none;font-weight:500}
-.section{padding:60px 20px;max-width:1100px;margin:auto}
-.section h2{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:40px;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
-.card{
-  transition:0.4s ease;
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 28px;
+  border-radius:40px;
+  background:#c6a75e;
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:white;
+  padding:10px 0;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  z-index:1000;
+  text-align:center;
 }
 
 .filter-btn{
@@ -35,173 +65,127 @@ header p{margin-top:15px;font-size:18px}
   color:white;
 }
 
-.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,0.08);transition:0.3s}
+.section{
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section h2{
+  font-family:'Playfair Display',serif;
+  font-size:30px;
+  margin-bottom:40px;
+  text-align:center;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp 0.6s ease forwards;
+  position:relative;
+}
+
 .card:hover{transform:translateY(-8px)}
-.card img{width:100%;height:300px;object-fit:cover}
-.card-content{padding:20px;text-align:center}
-.card h3{font-size:18px;margin-bottom:10px}
-.price{color:#c6a75e;font-weight:600;margin-bottom:10px}
-.whatsapp-buttons a{
-  display:block;
-  margin:10px 0;
-  padding:12px;
-  border-radius:40px;
-  background:linear-gradient(135deg,#f8d7df,#f6c1cf);
-  color:#3a2e2e;
-  text-decoration:none;
+
+@keyframes fadeUp{
+  to{opacity:1;transform:translateY(0);}
+}
+
+.card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:#c6a75e;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
   font-weight:500;
-  border:2px solid #c6a75e;
-  box-shadow:0 4px 12px rgba(198,167,94,0.25);
+}
+
+.card-content{
+  padding:20px;
+  text-align:center;
+}
+
+.card h3{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.product-info{
+  font-size:14px;
+  margin-bottom:10px;
+  color:#6d5a5a;
+}
+
+.product-sizes{
+  margin-bottom:10px;
+}
+
+.size-option{
+  display:inline-block;
+  padding:4px 10px;
+  margin:3px;
+  border:1px solid #c6a75e;
+  border-radius:20px;
+  font-size:13px;
+}
+
+.stock{
+  font-size:13px;
+  margin-bottom:10px;
+  color:#b23a48;
+  font-weight:500;
+}
+
+.select-product{
+  margin-top:10px;
+  padding:8px 18px;
+  border-radius:30px;
+  border:1px solid #c6a75e;
+  background:white;
+  cursor:pointer;
+  font-size:14px;
   transition:all 0.3s ease;
 }
 
-.whatsapp-buttons a:hover{
-  background:linear-gradient(135deg,#c6a75e,#d8b76a);
+.select-product:hover{
+  background:#c6a75e;
   color:white;
-  box-shadow:0 0 18px rgba(198,167,94,0.6);
-  transform:translateY(-3px);
+  box-shadow:0 0 10px rgba(198,167,94,0.6);
 }
-.about{text-align:center;max-width:700px;margin:auto;font-size:16px;line-height:1.7}
-footer{background:#3a2e2e;color:white;text-align:center;padding:25px;margin-top:60px}
-@media(max-width:600px){header h1{font-size:32px}.card img{height:240px}}
-</style>
-</head>
-<body>
 
-<header>
-<nav style="position:fixed; top:0; left:0; width:100%; background:white; padding:10px 0; box-shadow:0 2px 10px rgba(0,0,0,0.05); z-index:1000; text-align:center;">
-  <button onclick="filterCategory('all')" class="filter-btn">All</button>
-  <button onclick="filterCategory('dresses')" class="filter-btn">Dresses</button>
-  <button onclick="filterCategory('tops')" class="filter-btn">Tops</button>
-  <button onclick="filterCategory('jeans')" class="filter-btn">Jeans</button>
-</nav>
-<div style="height:60px;"></div>
-<h1>KOSABE</h1>
-<p>Luxury Soft Glam Feminine Fashion</p>
-<a href="#collection" class="btn">Shop Collection</a>
-</header>
+.price{
+  color:#c6a75e;
+  font-weight:600;
+  margin-top:10px;
+}
 
-<section class="section" id="collection">
-<h2>Featured Collection</h2>
-<div class="grid">
-
-<!-- ================= ADD NEW PRODUCTS BELOW THIS LINE ================= -->
-
-<!--
-NEW PRODUCT FORMAT (MULTIPLE IMAGES + CATEGORY READY)
-
-HOW TO USE:
-1. Upload all product images first.
-2. Copy ONE full product block below.
-3. Change ONLY:
-   - category class (dresses / tops / jeans)
-   - image file names
-   - product code (KSB-01, KSB-02, etc.)
-   - unique main image id (ksb01-main, ksb02-main etc.)
-
-EXAMPLE PRODUCT (READY TO COPY):
-
-<div class="card dresses">
-
-  <!-- MAIN IMAGE -->
-  <img id="ksb01-main" src="dress1a.jpg" alt="Silk Dress">
-
-  <!-- THUMBNAILS -->
-  <div class="gallery-thumbs">
-    <img src="dress1a.jpg" onclick="changeImage('ksb01-main','dress1a.jpg')">
-    <img src="dress1b.jpg" onclick="changeImage('ksb01-main','dress1b.jpg')">
-    <img src="dress1c.jpg" onclick="changeImage('ksb01-main','dress1c.jpg')">
-  </div>
-
-  <div class="card-content">
-    <h3 data-code="KSB-01">KSB-01 | Silk Evening Dress</h3>
-    
-    <!-- SIZES -->
-    <div class="product-sizes">
-      <span class="size-label">Sizes:</span>
-      <span class="size-option">XS</span>
-      <span class="size-option">S</span>
-      <span class="size-option">M</span>
-      <span class="size-option">L</span>
-    </div>
-
-    <button class="select-product">Select Product</button>
-    <div class="price">€ | $ | £ — DM for price</div>
-  </div>
-
-</div>
-
-END OF NEW TEMPLATE
--->
-
-<!-- PRODUCT TEMPLATE START
-<div class="card">
-  <img src="your-image.jpg" alt="Product Name">
-  <div class="card-content">
-    <h3>Product Name Here</h3>
-    <div class="price">€ | $ | £ — DM for price</div>
-    <div class="whatsapp-buttons">
-      <a href="https://wa.me/36708856190" target="_blank">Order Now</a>
-      <a href="https://wa.me/966500821680" target="_blank">Chat Now</a>
-    </div>
-  </div>
-</div>
-PRODUCT TEMPLATE END -->
-
-<div class="card heels">
-
-  <!-- MAIN IMAGE -->
-  <img id="ksb01-main" src="ksb01-1.jpg" alt="Noir Éclipse Royale Platforms">
-
-  <!-- THUMBNAILS -->
-  <div class="gallery-thumbs">
-    <img src="ksb01-1.jpg" onclick="changeImage('ksb01-main','ksb01-1.jpg')">
-    <img src="ksb01-2.jpg" onclick="changeImage('ksb01-main','ksb01-2.jpg')">
-    <img src="ksb01-3.jpg" onclick="changeImage('ksb01-main','ksb01-3.jpg')">
-    <img src="ksb01-4.jpg" onclick="changeImage('ksb01-main','ksb01-4.jpg')">
-    <img src="ksb01-5.jpg" onclick="changeImage('ksb01-main','ksb01-5.jpg')">
-    <img src="ksb01-6.jpg" onclick="changeImage('ksb01-main','ksb01-6.jpg')">
-    <img src="ksb01-7.jpg" onclick="changeImage('ksb01-main','ksb01-7.jpg')">
-  </div>
-
-  <div class="card-content">
-    <h3 data-code="KSB-01">KSB-01 | Noir Éclipse Royale Platforms</h3>
-
-    <div class="product-sizes">
-      <span class="size-label">Size:</span>
-      <span class="size-option">41</span>
-    </div>
-
-    <button class="select-product">Select Product</button>
-
-    <div class="price">€ | $ | £ — DM for price</div>
-  </div>
-
-</div>  
-
-</div>
-</section>
-
-<section class="section">
-<h2>About KOSABE</h2>
-<div class="about">
-KOSABE is a curated luxury soft glam fashion brand designed for confident, feminine women. Each piece is carefully selected to embody elegance, softness, and timeless beauty.
-</div>
-</section>
-
-<footer>
-© 2026 KOSABE — All Rights Reserved
-</footer>
-
-
-<!-- ===== LUXURY IMAGE GALLERY SCRIPT ===== -->
-<style>
 .gallery-thumbs{
   display:flex;
   gap:8px;
   justify-content:center;
   margin-top:10px;
 }
+
 .gallery-thumbs img{
   width:60px;
   height:60px;
@@ -211,57 +195,51 @@ KOSABE is a curated luxury soft glam fashion brand designed for confident, femin
   border:2px solid #eee;
   transition:all 0.3s ease;
 }
+
 .gallery-thumbs img:hover{
   border:2px solid #c6a75e;
   transform:scale(1.05);
 }
-</style>
 
-<script>
-function changeImage(mainId, newSrc){
-  document.getElementById(mainId).src = newSrc;
+.about{
+  text-align:center;
+  max-width:700px;
+  margin:auto;
+  font-size:16px;
+  line-height:1.7;
 }
-</script>
 
+footer{
+  background:#3a2e2e;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+}
 
-
-<!-- ================= PRODUCT CODE SYSTEM ================= -->
-<!-- HOW TO USE:
-Add product codes manually inside product title like this:
-<h3>KSB-01 | Silk Evening Dress</h3>
-Change the code number for each product.
-Customers will send this code when ordering.
--->
-
-<!-- ================= STICKY ORDER BAR ================= -->
-<style>
 .sticky-order{
   position:fixed;
   bottom:0;
   left:0;
   width:100%;
   background:#3a2e2e;
-  padding:12px 10px;
+  padding:12px;
   text-align:center;
   z-index:999;
 }
+
 .sticky-order a{
   background:linear-gradient(135deg,#c6a75e,#d8b76a);
   color:white;
   padding:10px 25px;
   border-radius:40px;
   text-decoration:none;
-  font-weight:500;
-  box-shadow:0 0 15px rgba(198,167,94,0.5);
-}
-.sticky-order a:hover{
-  opacity:0.9;
 }
 
 .floating-whatsapp{
   position:fixed;
   right:20px;
-  bottom:80px;
+  bottom:90px;
   width:60px;
   height:60px;
   background:#25D366;
@@ -275,93 +253,118 @@ Customers will send this code when ordering.
   font-size:28px;
   color:white;
 }
-.floating-whatsapp:hover{
-  transform:scale(1.1);
-  transition:0.3s;
-}
-body{padding-bottom:70px;}
 </style>
+</head>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/36708856190?text=Hello%20KOSABE%2C%20I%20want%20to%20order%20product%20code%20" 
-   target="_blank" 
-   class="floating-whatsapp">💬</a>
+<body>
 
-<!-- STICKY ORDER BAR -->
+<nav>
+  <button onclick="filterCategory('all')" class="filter-btn">All</button>
+  <button onclick="filterCategory('dresses')" class="filter-btn">Dresses</button>
+  <button onclick="filterCategory('tops')" class="filter-btn">Tops</button>
+  <button onclick="filterCategory('jeans')" class="filter-btn">Jeans</button>
+  <button onclick="filterCategory('heels')" class="filter-btn">Heels</button>
+</nav>
+
+<header>
+<h1>KOSABE</h1>
+<p>Luxury Soft Glam Feminine Fashion</p>
+<a href="#collection" class="btn">Shop Collection</a>
+</header>
+
+<section class="section" id="collection">
+<h2>Featured Collection</h2>
+
+<div class="grid">
+
+<!-- ================= PRODUCT ================= -->
+
+<div class="card heels">
+
+  <div class="badge">Limited Piece</div>
+
+  <img id="ksb01-main" src="ksb01-1.jpg" alt="Noir Éclipse Royale Platforms">
+
+  <div class="gallery-thumbs">
+    <img src="ksb01-1.jpg" onclick="changeImage('ksb01-main','ksb01-1.jpg')">
+    <img src="ksb01-2.jpg" onclick="changeImage('ksb01-main','ksb01-2.jpg')">
+    <img src="ksb01-3.jpg" onclick="changeImage('ksb01-main','ksb01-3.jpg')">
+    <img src="ksb01-4.jpg" onclick="changeImage('ksb01-main','ksb01-4.jpg')">
+    <img src="ksb01-5.jpg" onclick="changeImage('ksb01-main','ksb01-5.jpg')">
+    <img src="ksb01-6.jpg" onclick="changeImage('ksb01-main','ksb01-6.jpg')">
+    <img src="ksb01-7.jpg" onclick="changeImage('ksb01-main','ksb01-7.jpg')">
+  </div>
+
+  <div class="card-content">
+
+    <h3 data-code="KSB-01">KSB-01 | Noir Éclipse Royale Platforms</h3>
+
+    <div class="product-info">
+      Heel Height: Approx. 17cm | Extreme Platform
+    </div>
+
+    <div class="product-sizes">
+      <span class="size-option">Size 41</span>
+    </div>
+
+    <div class="stock">
+      Only 1 pair available
+    </div>
+
+    <button class="select-product">Select Product</button>
+
+    <div class="price">€ | $ | £ — DM for price</div>
+
+  </div>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>About KOSABE</h2>
+<div class="about">
+KOSABE is a curated luxury soft glam fashion brand designed for confident, feminine women. Each piece embodies elegance, softness, and bold statement energy.
+</div>
+</section>
+
+<footer>
+© 2026 KOSABE — All Rights Reserved
+</footer>
+
+<a href="https://wa.me/36708856190" target="_blank" class="floating-whatsapp">💬</a>
+
 <div class="sticky-order">
-  <a href="https://wa.me/36708856190?text=Hello%20KOSABE%2C%20I%20want%20to%20order%20product%20code%20" target="_blank">
+  <a href="https://wa.me/36708856190" target="_blank">
     Order Now via WhatsApp
   </a>
 </div>
 
-
-
-<!-- ================= AUTO PRODUCT CODE SYSTEM ================= -->
-<!-- HOW TO USE:
-1. For each product title, add data-code like this:
-   <h3 data-code="KSB-01">KSB-01 | Silk Dress</h3>
-2. Add this button under the title inside the product:
-   <button class="select-product">Select Product</button>
-The system will auto-fill WhatsApp with the correct code.
--->
-
-<style>
-.select-product{
-  margin-top:10px;
-  padding:8px 18px;
-  border-radius:30px;
-  border:1px solid #c6a75e;
-  background:white;
-  cursor:pointer;
-  font-size:14px;
-  transition:all 0.3s ease;
-}
-.select-product:hover{
-  background:#c6a75e;
-  color:white;
-  box-shadow:0 0 10px rgba(198,167,94,0.6);
-}
-
-.card{
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 0.6s ease forwards;
-}
-
-@keyframes fadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-</style>
-
 <script>
-document.querySelectorAll('.select-product').forEach(button => {
-  button.addEventListener('click', function(){
-    const code = this.closest('.card').querySelector('h3').getAttribute('data-code');
-    const message = `Hello KOSABE, I want to order product code ${code}`;
-    window.open(`https://wa.me/36708856190?text=${encodeURIComponent(message)}`, '_blank');
-  });
-});
-</script>
+function changeImage(mainId, newSrc){
+  document.getElementById(mainId).src = newSrc;
+}
 
-
-<script>
 function filterCategory(category){
   const cards = document.querySelectorAll('.card');
   cards.forEach(card => {
     if(category === 'all'){
       card.style.display = 'block';
     } else {
-      if(card.classList.contains(category)){
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = card.classList.contains(category) ? 'block' : 'none';
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.select-product').forEach(button => {
+    button.addEventListener('click', function(){
+      const code = this.closest('.card').querySelector('h3').getAttribute('data-code');
+      const message = `Hello KOSABE, I want to order product code ${code}`;
+      window.open(`https://wa.me/36708856190?text=${encodeURIComponent(message)}`, '_blank');
+    });
+  });
+});
 </script>
 
 </body>
