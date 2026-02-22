@@ -9,362 +9,286 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Poppins',sans-serif;background:#fff8f5;color:#3a2e2e;padding-bottom:80px}
-
-header{
-  background:linear-gradient(135deg,#f6c1cf,#e8d8c3);
-  padding:100px 20px 80px;
-  text-align:center;
-  position:relative;
-}
-
-header h1{
-  font-family:'Playfair Display',serif;
-  font-size:42px;
-  letter-spacing:3px;
-}
-
-header p{margin-top:15px;font-size:18px}
-
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:12px 28px;
-  border-radius:40px;
-  background:#c6a75e;
-  color:white;
-  text-decoration:none;
-  font-weight:500;
-}
+body{font-family:'Poppins',sans-serif;background:#fff8f5;color:#3a2e2e;padding-bottom:90px}
 
 nav{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:white;
-  padding:10px 0;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
-  z-index:1000;
-  text-align:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:10px 0;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+text-align:center;
 }
 
 .filter-btn{
-  background:none;
-  border:1px solid #c6a75e;
-  padding:6px 16px;
-  margin:0 5px;
-  border-radius:20px;
-  cursor:pointer;
-  font-size:14px;
-  transition:all 0.3s ease;
+background:none;
+border:1px solid #c6a75e;
+padding:6px 16px;
+margin:0 5px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+transition:all 0.3s ease;
+}
+.filter-btn:hover{background:#c6a75e;color:white}
+
+header{
+background:linear-gradient(135deg,#f6c1cf,#e8d8c3);
+padding:120px 20px 80px;
+text-align:center;
 }
 
-.filter-btn:hover{
-  background:#c6a75e;
-  color:white;
+header h1{
+font-family:'Playfair Display',serif;
+font-size:42px;
+letter-spacing:3px;
 }
 
 .section{
-  padding:60px 20px;
-  max-width:1100px;
-  margin:auto;
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
 }
 
 .section h2{
-  font-family:'Playfair Display',serif;
-  font-size:30px;
-  margin-bottom:40px;
-  text-align:center;
+font-family:'Playfair Display',serif;
+font-size:30px;
+margin-bottom:40px;
+text-align:center;
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-  background:white;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  transition:0.3s;
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 0.6s ease forwards;
-  position:relative;
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+position:relative;
 }
 
 .card:hover{transform:translateY(-8px)}
 
-@keyframes fadeUp{
-  to{opacity:1;transform:translateY(0);}
-}
-
 .card img{
-  width:100%;
-  height:300px;
-  object-fit:cover;
+width:100%;
+height:300px;
+object-fit:cover;
 }
 
 .badge{
-  position:absolute;
-  top:15px;
-  left:15px;
-  background:#c6a75e;
-  color:white;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:500;
+position:absolute;
+top:15px;
+left:15px;
+background:#c6a75e;
+color:white;
+padding:6px 12px;
+border-radius:20px;
+font-size:12px;
 }
 
 .card-content{
-  padding:20px;
-  text-align:center;
-}
-
-.card h3{
-  font-size:18px;
-  margin-bottom:10px;
+padding:20px;
+text-align:center;
 }
 
 .product-info{
-  font-size:14px;
-  margin-bottom:10px;
-  color:#6d5a5a;
-}
-
-.product-sizes{
-  margin-bottom:10px;
+font-size:14px;
+margin-bottom:10px;
+color:#6d5a5a;
 }
 
 .size-option{
-  display:inline-block;
-  padding:4px 10px;
-  margin:3px;
-  border:1px solid #c6a75e;
-  border-radius:20px;
-  font-size:13px;
+display:inline-block;
+padding:4px 10px;
+margin:3px;
+border:1px solid #c6a75e;
+border-radius:20px;
+font-size:13px;
 }
 
 .stock{
-  font-size:13px;
-  margin-bottom:10px;
-  color:#b23a48;
-  font-weight:500;
+font-size:13px;
+margin:8px 0;
+color:#b23a48;
+font-weight:500;
 }
 
 .select-product{
-  margin-top:10px;
-  padding:8px 18px;
-  border-radius:30px;
-  border:1px solid #c6a75e;
-  background:white;
-  cursor:pointer;
-  font-size:14px;
-  transition:all 0.3s ease;
+margin-top:10px;
+padding:8px 18px;
+border-radius:30px;
+border:1px solid #c6a75e;
+background:white;
+cursor:pointer;
+font-size:14px;
+transition:all 0.3s ease;
 }
-
 .select-product:hover{
-  background:#c6a75e;
-  color:white;
-  box-shadow:0 0 10px rgba(198,167,94,0.6);
+background:#c6a75e;
+color:white;
+box-shadow:0 0 10px rgba(198,167,94,0.6);
 }
 
 .price{
-  color:#c6a75e;
-  font-weight:600;
-  margin-top:10px;
+color:#c6a75e;
+font-weight:600;
+margin-top:10px;
 }
 
 .gallery-thumbs{
-  display:flex;
-  gap:8px;
-  justify-content:center;
-  margin-top:10px;
+display:flex;
+gap:8px;
+justify-content:center;
+margin-top:10px;
+flex-wrap:wrap;
 }
-
 .gallery-thumbs img{
-  width:60px;
-  height:60px;
-  object-fit:cover;
-  border-radius:10px;
-  cursor:pointer;
-  border:2px solid #eee;
-  transition:all 0.3s ease;
+width:60px;
+height:60px;
+object-fit:cover;
+border-radius:10px;
+cursor:pointer;
+border:2px solid #eee;
+transition:all 0.3s ease;
 }
-
 .gallery-thumbs img:hover{
-  border:2px solid #c6a75e;
-  transform:scale(1.05);
-}
-
-.about{
-  text-align:center;
-  max-width:700px;
-  margin:auto;
-  font-size:16px;
-  line-height:1.7;
-}
-
-footer{
-  background:#3a2e2e;
-  color:white;
-  text-align:center;
-  padding:25px;
-  margin-top:60px;
+border:2px solid #c6a75e;
+transform:scale(1.05);
 }
 
 .sticky-order{
-  position:fixed;
-  bottom:0;
-  left:0;
-  width:100%;
-  background:#3a2e2e;
-  padding:12px;
-  text-align:center;
-  z-index:999;
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#3a2e2e;
+padding:12px;
+text-align:center;
+z-index:999;
 }
-
 .sticky-order a{
-  background:linear-gradient(135deg,#c6a75e,#d8b76a);
-  color:white;
-  padding:10px 25px;
-  border-radius:40px;
-  text-decoration:none;
+background:linear-gradient(135deg,#c6a75e,#d8b76a);
+color:white;
+padding:10px 25px;
+border-radius:40px;
+text-decoration:none;
 }
 
 .floating-whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:90px;
-  width:60px;
-  height:60px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 15px rgba(0,0,0,0.3);
-  z-index:1000;
-  text-decoration:none;
-  font-size:28px;
-  color:white;
+position:fixed;
+right:20px;
+bottom:90px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+z-index:1000;
+text-decoration:none;
+font-size:28px;
+color:white;
 }
 </style>
 </head>
-
 <body>
 
 <nav>
-  <button onclick="filterCategory('all')" class="filter-btn">All</button>
-  <button onclick="filterCategory('dresses')" class="filter-btn">Dresses</button>
-  <button onclick="filterCategory('tops')" class="filter-btn">Tops</button>
-  <button onclick="filterCategory('jeans')" class="filter-btn">Jeans</button>
-  <button onclick="filterCategory('heels')" class="filter-btn">Heels</button>
+<button onclick="filterCategory('all')" class="filter-btn">All</button>
+<button onclick="filterCategory('heels')" class="filter-btn">Heels</button>
 </nav>
 
 <header>
 <h1>KOSABE</h1>
 <p>Luxury Soft Glam Feminine Fashion</p>
-<a href="#collection" class="btn">Shop Collection</a>
 </header>
 
-<section class="section" id="collection">
-<h2>Featured Collection</h2>
+<section class="section">
+<h2>High Heels Collection</h2>
 
 <div class="grid">
 
-<!-- ================= PRODUCT ================= -->
+<!-- ================= KSB-01 ================= -->
 
 <div class="card heels">
 
-  <div class="badge">Limited Piece</div>
+<div class="badge">Limited Piece</div>
 
-  <img id="ksb01-main" src="ksb01-1.jpg" alt="Noir Éclipse Royale Platforms">
+<img id="ksb01-main" src="20250307_213805.jpg">
 
-  <div class="gallery-thumbs">
-    <img src="ksb01-1.jpg" onclick="changeImage('ksb01-main','ksb01-1.jpg')">
-    <img src="ksb01-2.jpg" onclick="changeImage('ksb01-main','ksb01-2.jpg')">
-    <img src="ksb01-3.jpg" onclick="changeImage('ksb01-main','ksb01-3.jpg')">
-    <img src="ksb01-4.jpg" onclick="changeImage('ksb01-main','ksb01-4.jpg')">
-    <img src="ksb01-5.jpg" onclick="changeImage('ksb01-main','ksb01-5.jpg')">
-    <img src="ksb01-6.jpg" onclick="changeImage('ksb01-main','ksb01-6.jpg')">
-    <img src="ksb01-7.jpg" onclick="changeImage('ksb01-main','ksb01-7.jpg')">
-  </div>
+<div class="gallery-thumbs">
+<img src="20250307_213805.jpg" onclick="changeImage('ksb01-main','20250307_213805.jpg')">
+<img src="20250307_213833.jpg" onclick="changeImage('ksb01-main','20250307_213833.jpg')">
+<img src="20250307_213903.jpg" onclick="changeImage('ksb01-main','20250307_213903.jpg')">
+<img src="20250307_213920.jpg" onclick="changeImage('ksb01-main','20250307_213920.jpg')">
+<img src="20250307_213927.jpg" onclick="changeImage('ksb01-main','20250307_213927.jpg')">
+<img src="20250307_213942.jpg" onclick="changeImage('ksb01-main','20250307_213942.jpg')">
+<img src="20250307_214002.jpg" onclick="changeImage('ksb01-main','20250307_214002.jpg')">
+</div>
 
-  <div class="card-content">
+<div class="card-content">
 
-    <h3 data-code="KSB-01">KSB-01 | Noir Éclipse Royale Platforms</h3>
+<h3 data-code="KSB-01">KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
 
-    <div class="product-info">
-      Heel Height: Approx. 17cm | Extreme Platform
-    </div>
+<div class="product-info">
+17cm sculpted gold stiletto • High-gloss platform base • Noir glitter finish
+</div>
 
-    <div class="product-sizes">
-      <span class="size-option">Size 41</span>
-    </div>
+<div>
+<span class="size-option">Size 40</span>
+<span class="size-option">Size 41</span>
+</div>
 
-    <div class="stock">
-      Only 1 pair available
-    </div>
+<div class="stock">Only 1 pair available</div>
 
-    <button class="select-product">Select Product</button>
+<button class="select-product">Select Product</button>
 
-    <div class="price">€ | $ | £ — DM for price</div>
+<div class="price">€ | $ | £ — DM for price</div>
 
-  </div>
+</div>
 </div>
 
 </div>
 </section>
-
-<section class="section">
-<h2>About KOSABE</h2>
-<div class="about">
-KOSABE is a curated luxury soft glam fashion brand designed for confident, feminine women. Each piece embodies elegance, softness, and bold statement energy.
-</div>
-</section>
-
-<footer>
-© 2026 KOSABE — All Rights Reserved
-</footer>
 
 <a href="https://wa.me/36708856190" target="_blank" class="floating-whatsapp">💬</a>
 
 <div class="sticky-order">
-  <a href="https://wa.me/36708856190" target="_blank">
-    Order Now via WhatsApp
-  </a>
+<a href="https://wa.me/36708856190" target="_blank">Order Now via WhatsApp</a>
 </div>
 
 <script>
-function changeImage(mainId, newSrc){
-  document.getElementById(mainId).src = newSrc;
+function changeImage(mainId,newSrc){
+document.getElementById(mainId).src=newSrc;
 }
 
 function filterCategory(category){
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(card => {
-    if(category === 'all'){
-      card.style.display = 'block';
-    } else {
-      card.style.display = card.classList.contains(category) ? 'block' : 'none';
-    }
-  });
+const cards=document.querySelectorAll('.card');
+cards.forEach(card=>{
+if(category==='all'){card.style.display='block'}
+else{card.style.display=card.classList.contains(category)?'block':'none'}
+})
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  document.querySelectorAll('.select-product').forEach(button => {
-    button.addEventListener('click', function(){
-      const code = this.closest('.card').querySelector('h3').getAttribute('data-code');
-      const message = `Hello KOSABE, I want to order product code ${code}`;
-      window.open(`https://wa.me/36708856190?text=${encodeURIComponent(message)}`, '_blank');
-    });
-  });
-});
+document.addEventListener("DOMContentLoaded",function(){
+document.querySelectorAll('.select-product').forEach(button=>{
+button.addEventListener('click',function(){
+const code=this.closest('.card').querySelector('h3').getAttribute('data-code');
+const message=`Hello KOSABE, I want to order product code ${code}`;
+window.open(`https://wa.me/36708856190?text=${encodeURIComponent(message)}`,'_blank');
+})
+})
+})
 </script>
 
 </body>
