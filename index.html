@@ -94,7 +94,7 @@ font-size:12px;
 }
 
 .brand{
-display:inline-block;
+display:block;
 margin-top:6px;
 font-size:12px;
 letter-spacing:1px;
@@ -113,24 +113,17 @@ margin-bottom:10px;
 color:#6d5a5a;
 }
 
-.size-option{
+.size-single{
 display:inline-block;
-padding:4px 10px;
-margin:3px;
+padding:6px 14px;
+margin-top:6px;
 border:1px solid #c6a75e;
 border-radius:20px;
-font-size:13px;
-}
-
-.stock{
-font-size:13px;
-margin:8px 0;
-color:#b23a48;
-font-weight:500;
+font-size:14px;
 }
 
 .select-product{
-margin-top:10px;
+margin-top:12px;
 padding:8px 18px;
 border-radius:30px;
 border:1px solid #c6a75e;
@@ -215,6 +208,7 @@ color:white;
 <button onclick="filterCategory('all')" class="filter-btn">All</button>
 <button onclick="filterCategory('heels')" class="filter-btn">Heels</button>
 <button onclick="filterCategory('sneakers')" class="filter-btn">Sneakers</button>
+<button onclick="filterCategory('leggings')" class="filter-btn">Leggings</button>
 </nav>
 
 <header>
@@ -227,59 +221,28 @@ color:white;
 
 <div class="grid">
 
-<!-- ================= KSB-01 HEELS ================= -->
-<div class="card heels">
-<div class="badge">Limited Piece</div>
-<img id="ksb01-main" src="20250307_213805.jpg">
+<!-- ================= KSB-03 LEGGINGS ================= -->
+<div class="card leggings">
+<div class="badge">New Arrival</div>
+<img id="ksb03-main" src="Legging animal print.webp">
 
 <div class="gallery-thumbs">
-<img src="20250307_213805.jpg" onclick="changeImage('ksb01-main','20250307_213805.jpg')">
-<img src="20250307_213833.jpg" onclick="changeImage('ksb01-main','20250307_213833.jpg')">
-<img src="20250307_213903.jpg" onclick="changeImage('ksb01-main','20250307_213903.jpg')">
-<img src="20250307_213920.jpg" onclick="changeImage('ksb01-main','20250307_213920.jpg')">
-<img src="20250307_213927.jpg" onclick="changeImage('ksb01-main','20250307_213927.jpg')">
-<img src="20250307_213942.jpg" onclick="changeImage('ksb01-main','20250307_213942.jpg')">
-<img src="20250307_214002.jpg" onclick="changeImage('ksb01-main','20250307_214002.jpg')">
+<img src="Legging animal print.webp" onclick="changeImage('ksb03-main','Legging animal print.webp')">
+<img src="Legging animal print 1.webp" onclick="changeImage('ksb03-main','Legging animal print 1.webp')">
+<img src="animal print 2 .jpg" onclick="changeImage('ksb03-main','animal print 2 .jpg')">
+<img src="animal print 3 .jpg" onclick="changeImage('ksb03-main','animal print 3 .jpg')">
+<img src="animal print 4 .jpg" onclick="changeImage('ksb03-main','animal print 4 .jpg')">
+<img src="legings tigrati.jpg" onclick="changeImage('ksb03-main','legings tigrati.jpg')">
+<img src="legings tigrati 1.jpg" onclick="changeImage('ksb03-main','legings tigrati 1.jpg')">
+<img src="legings tigrati 2.jpg" onclick="changeImage('ksb03-main','legings tigrati 2.jpg')">
+<img src="legings tigrati 3.jpg" onclick="changeImage('ksb03-main','legings tigrati 3.jpg')">
 </div>
 
 <div class="card-content">
-<h3 data-code="KSB-01">KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
-<div class="brand">Brand: Kayina</div>
-<div class="product-info">17cm sculpted gold stiletto • Noir glitter finish</div>
-<div>
-<span class="size-option">40</span>
-<span class="size-option">41</span>
-</div>
-<div class="stock">Only 1 pair available</div>
-<button class="select-product">Select Product</button>
-<div class="price">€ | $ | £ — DM for price</div>
-</div>
-</div>
-
-<!-- ================= KSB-02 SNEAKERS ================= -->
-<div class="card sneakers">
-<div class="badge">Sport Luxe</div>
-<img id="ksb02-main" src="20250307_215307.jpg">
-
-<div class="gallery-thumbs">
-<img src="20250307_215307.jpg" onclick="changeImage('ksb02-main','20250307_215307.jpg')">
-<img src="20250307_215323.jpg" onclick="changeImage('ksb02-main','20250307_215323.jpg')">
-<img src="20250307_215345.jpg" onclick="changeImage('ksb02-main','20250307_215345.jpg')">
-<img src="20250307_215357.jpg" onclick="changeImage('ksb02-main','20250307_215357.jpg')">
-<img src="20250307_215407.jpg" onclick="changeImage('ksb02-main','20250307_215407.jpg')">
-<img src="20250307_215422.jpg" onclick="changeImage('ksb02-main','20250307_215422.jpg')">
-<img src="20250307_215435.jpg" onclick="changeImage('ksb02-main','20250307_215435.jpg')">
-<img src="20250307_215450.jpg" onclick="changeImage('ksb02-main','20250307_215450.jpg')">
-</div>
-
-<div class="card-content">
-<h3 data-code="KSB-02">KSB-02 | Neon Velocity Luxe Runners</h3>
-<div class="brand">Brand: PUMA</div>
-<div class="product-info">Lightweight performance sole • Graphic neon streak design</div>
-<div>
-<span class="size-option">35</span>
-<span class="size-option">36</span>
-</div>
+<h3 data-code="KSB-03">KSB-03 | Savana Sculpt Luxe Leggings</h3>
+<div class="brand">Brand: Calzedonia</div>
+<div class="product-info">High-waist sculpt fit • Bold feline print • Stretch contour fabric</div>
+<div class="size-single">Size: S/M</div>
 <button class="select-product">Select Product</button>
 <div class="price">€ | $ | £ — DM for price</div>
 </div>
