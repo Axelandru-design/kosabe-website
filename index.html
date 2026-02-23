@@ -9,35 +9,11 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Poppins',sans-serif;background:#f5efec;color:#3a2e2e;padding-bottom:90px}
-
-nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-background:white;
-padding:12px 0;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-z-index:1000;
-text-align:center;
-}
-
-.filter-btn{
-background:none;
-border:1px solid #c6a75e;
-padding:6px 16px;
-margin:0 5px;
-border-radius:20px;
-cursor:pointer;
-font-size:14px;
-transition:all 0.3s ease;
-}
-.filter-btn:hover{background:#c6a75e;color:white}
+body{font-family:'Poppins',sans-serif;background:#f3ede9;color:#3a2e2e;padding-bottom:90px}
 
 header{
 background:linear-gradient(135deg,#e7c7c7,#e6d5c9);
-padding:120px 20px 80px;
+padding:100px 20px 60px;
 text-align:center;
 }
 
@@ -53,13 +29,6 @@ max-width:1200px;
 margin:auto;
 }
 
-.section h2{
-font-family:'Playfair Display',serif;
-font-size:30px;
-margin-bottom:40px;
-text-align:center;
-}
-
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -73,7 +42,8 @@ overflow:hidden;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 transition:0.3s;
 }
-.card:hover{transform:translateY(-8px)}
+
+.card:hover{transform:translateY(-6px)}
 
 .card img{
 width:100%;
@@ -81,25 +51,25 @@ height:300px;
 object-fit:cover;
 }
 
-.gallery-thumbs{
+.gallery{
 display:flex;
 gap:6px;
 justify-content:center;
-margin-top:10px;
 flex-wrap:wrap;
+padding:10px;
 }
-.gallery-thumbs img{
+
+.gallery img{
 width:55px;
 height:55px;
 object-fit:cover;
 border-radius:8px;
 cursor:pointer;
 border:2px solid #eee;
-transition:all 0.3s ease;
 }
-.gallery-thumbs img:hover{
+
+.gallery img:hover{
 border:2px solid #c6a75e;
-transform:scale(1.05);
 }
 
 .card-content{
@@ -108,91 +78,43 @@ text-align:center;
 }
 
 .brand{
-display:block;
-margin-top:6px;
 font-size:12px;
-letter-spacing:1px;
 color:#c6a75e;
+margin:6px 0;
 font-weight:600;
 }
 
-.size-single{
+.size{
 display:inline-block;
 padding:6px 14px;
-margin-top:6px;
 border:1px solid #c6a75e;
 border-radius:20px;
 font-size:14px;
+margin:6px 0;
 }
 
-.select-product{
-margin-top:12px;
+button{
+margin-top:10px;
 padding:8px 18px;
 border-radius:30px;
 border:1px solid #c6a75e;
 background:white;
 cursor:pointer;
-font-size:14px;
-transition:all 0.3s ease;
 }
-.select-product:hover{
+
+button:hover{
 background:#c6a75e;
 color:white;
-box-shadow:0 0 10px rgba(198,167,94,0.6);
 }
 
 .price{
 color:#c6a75e;
-font-weight:600;
 margin-top:10px;
-}
-
-.sticky-order{
-position:fixed;
-bottom:0;
-left:0;
-width:100%;
-background:#3a2e2e;
-padding:12px;
-text-align:center;
-z-index:999;
-}
-.sticky-order a{
-background:linear-gradient(135deg,#c6a75e,#d8b76a);
-color:white;
-padding:10px 25px;
-border-radius:40px;
-text-decoration:none;
-}
-
-.floating-whatsapp{
-position:fixed;
-right:20px;
-bottom:90px;
-width:60px;
-height:60px;
-background:#25D366;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 4px 15px rgba(0,0,0,0.3);
-z-index:1000;
-text-decoration:none;
-font-size:28px;
-color:white;
+font-weight:600;
 }
 </style>
 </head>
 <body>
-
-<nav>
-<button onclick="filterCategory('all')" class="filter-btn">All</button>
-<button onclick="filterCategory('heels')" class="filter-btn">Heels</button>
-<button onclick="filterCategory('sneakers')" class="filter-btn">Sneakers</button>
-<button onclick="filterCategory('leggings')" class="filter-btn">Leggings</button>
-<button onclick="filterCategory('jackets')" class="filter-btn">Jackets</button>
-</nav>
 
 <header>
 <h1>KOSABE</h1>
@@ -200,76 +122,75 @@ color:white;
 </header>
 
 <section class="section">
-<h2>Collection</h2>
 <div class="grid">
 
 <!-- KSB-01 -->
-<div class="card heels">
+<div class="card">
 <img src="20250307_213805.jpg">
 <div class="card-content">
-<h3 data-code="KSB-01">KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
+<h3>KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
 <div class="brand">Brand: Kayina</div>
-<div class="size-single">Size: 40/41</div>
-<button class="select-product">Select Product</button>
+<div class="size">Size: 40/41</div>
+<button onclick="order('KSB-01')">Select Product</button>
 <div class="price">€ | $ | £ — DM for price</div>
 </div>
 </div>
 
 <!-- KSB-02 -->
-<div class="card sneakers">
+<div class="card">
 <img src="20250307_215307.jpg">
 <div class="card-content">
-<h3 data-code="KSB-02">KSB-02 | Neon Velocity Luxe Runners</h3>
+<h3>KSB-02 | Neon Velocity Luxe Runners</h3>
 <div class="brand">Brand: PUMA</div>
-<div class="size-single">Size: 35/36</div>
-<button class="select-product">Select Product</button>
+<div class="size">Size: 35/36</div>
+<button onclick="order('KSB-02')">Select Product</button>
 <div class="price">€ | $ | £ — DM for price</div>
 </div>
 </div>
 
 <!-- KSB-03 -->
-<div class="card leggings">
-<img id="ksb03-main" src="ksb03-1.webp">
-<div class="gallery-thumbs">
-<img src="ksb03-1.webp" onclick="changeImage('ksb03-main','ksb03-1.webp')">
-<img src="ksb03-2.jpg" onclick="changeImage('ksb03-main','ksb03-2.jpg')">
-<img src="ksb03-3.jpg" onclick="changeImage('ksb03-main','ksb03-3.jpg')">
-<img src="ksb03-4.jpg" onclick="changeImage('ksb03-main','ksb03-4.jpg')">
-<img src="ksb03-5.jpg" onclick="changeImage('ksb03-main','ksb03-5.jpg')">
-<img src="ksb03-6.jpg" onclick="changeImage('ksb03-main','ksb03-6.jpg')">
-<img src="ksb03-7.jpg" onclick="changeImage('ksb03-main','ksb03-7.jpg')">
-<img src="ksb03-8.jpg" onclick="changeImage('ksb03-main','ksb03-8.jpg')">
+<div class="card">
+<img id="p3" src="ksb03-1.jpg">
+<div class="gallery">
+<img src="ksb03-1.jpg" onclick="change('p3','ksb03-1.jpg')">
+<img src="ksb03-2.jpg" onclick="change('p3','ksb03-2.jpg')">
+<img src="ksb03-3.jpg" onclick="change('p3','ksb03-3.jpg')">
+<img src="ksb03-4.jpg" onclick="change('p3','ksb03-4.jpg')">
+<img src="ksb03-5.jpg" onclick="change('p3','ksb03-5.jpg')">
+<img src="ksb03-6.jpg" onclick="change('p3','ksb03-6.jpg')">
+<img src="ksb03-7.jpg" onclick="change('p3','ksb03-7.jpg')">
+<img src="ksb03-8.jpg" onclick="change('p3','ksb03-8.jpg')">
 </div>
 <div class="card-content">
-<h3 data-code="KSB-03">KSB-03 | Savana Sculpt Luxe Leggings</h3>
+<h3>KSB-03 | Savana Sculpt Luxe Leggings</h3>
 <div class="brand">Brand: Calzedonia</div>
-<div class="size-single">Size: S/M</div>
-<button class="select-product">Select Product</button>
+<div class="size">Size: S/M</div>
+<button onclick="order('KSB-03')">Select Product</button>
 <div class="price">€ | $ | £ — DM for price</div>
 </div>
 </div>
 
 <!-- KSB-04 -->
-<div class="card jackets">
-<img id="ksb04-main" src="ksb04-black-1.jpg">
-<div class="gallery-thumbs">
-<img src="ksb04-black-1.jpg" onclick="changeImage('ksb04-main','ksb04-black-1.jpg')">
-<img src="ksb04-black-3.jpg" onclick="changeImage('ksb04-main','ksb04-black-3.jpg')">
-<img src="ksb04-black-4.jpg" onclick="changeImage('ksb04-main','ksb04-black-4.jpg')">
-<img src="ksb04-black-5.jpg" onclick="changeImage('ksb04-main','ksb04-black-5.jpg')">
-<img src="ksb04-orange-1.jpg" onclick="changeImage('ksb04-main','ksb04-orange-1.jpg')">
-<img src="ksb04-orange-2.jpg" onclick="changeImage('ksb04-main','ksb04-orange-2.jpg')">
-<img src="ksb04-orange-3.jpg" onclick="changeImage('ksb04-main','ksb04-orange-3.jpg')">
-<img src="ksb04-orange-4.jpg" onclick="changeImage('ksb04-main','ksb04-orange-4.jpg')">
-<img src="ksb04-orange-5.jpg" onclick="changeImage('ksb04-main','ksb04-orange-5.jpg')">
-<img src="ksb04-orange-6.jpg" onclick="changeImage('ksb04-main','ksb04-orange-6.jpg')">
-<img src="ksb04-orange-7.jpg" onclick="changeImage('ksb04-main','ksb04-orange-7.jpg')">
+<div class="card">
+<img id="p4" src="ksb04-1.jpg">
+<div class="gallery">
+<img src="ksb04-1.jpg" onclick="change('p4','ksb04-1.jpg')">
+<img src="ksb04-2.jpg" onclick="change('p4','ksb04-2.jpg')">
+<img src="ksb04-3.jpg" onclick="change('p4','ksb04-3.jpg')">
+<img src="ksb04-4.jpg" onclick="change('p4','ksb04-4.jpg')">
+<img src="ksb04-5.jpg" onclick="change('p4','ksb04-5.jpg')">
+<img src="ksb04-6.jpg" onclick="change('p4','ksb04-6.jpg')">
+<img src="ksb04-7.jpg" onclick="change('p4','ksb04-7.jpg')">
+<img src="ksb04-8.jpg" onclick="change('p4','ksb04-8.jpg')">
+<img src="ksb04-9.jpg" onclick="change('p4','ksb04-9.jpg')">
+<img src="ksb04-10.jpg" onclick="change('p4','ksb04-10.jpg')">
+<img src="ksb04-11.jpg" onclick="change('p4','ksb04-11.jpg')">
 </div>
 <div class="card-content">
-<h3 data-code="KSB-04">KSB-04 | Elevate StormShield Kids Jacket</h3>
+<h3>KSB-04 | Elevate StormShield Kids Jacket</h3>
 <div class="brand">Brand: Elevate</div>
-<div class="size-single">Size: Kids / XS / S</div>
-<button class="select-product">Select Product</button>
+<div class="size">Size: Kids / XS / S</div>
+<button onclick="order('KSB-04')">Select Product</button>
 <div class="price">€ | $ | £ — DM for price</div>
 </div>
 </div>
@@ -277,30 +198,11 @@ color:white;
 </div>
 </section>
 
-<a href="https://wa.me/36708856190" target="_blank" class="floating-whatsapp">💬</a>
-
-<div class="sticky-order">
-<a href="https://wa.me/36708856190" target="_blank">Order Now via WhatsApp</a>
-</div>
-
 <script>
-function changeImage(mainId,newSrc){
-document.getElementById(mainId).src=newSrc;
+function change(id,src){document.getElementById(id).src=src}
+function order(code){
+window.open("https://wa.me/36708856190?text=Hello KOSABE, I want to order product code "+code,"_blank")
 }
-function filterCategory(category){
-const cards=document.querySelectorAll('.card');
-cards.forEach(card=>{
-if(category==='all'){card.style.display='block'}
-else{card.style.display=card.classList.contains(category)?'block':'none'}
-})
-}
-document.querySelectorAll('.select-product').forEach(button=>{
-button.addEventListener('click',function(){
-const code=this.closest('.card').querySelector('h3').getAttribute('data-code');
-const message=`Hello KOSABE, I want to order product code ${code}`;
-window.open(`https://wa.me/36708856190?text=${encodeURIComponent(message)}`,'_blank');
-})
-})
 </script>
 
 </body>
