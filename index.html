@@ -9,7 +9,13 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Poppins',sans-serif;background:#f3ede9;color:#3a2e2e;padding-bottom:90px}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f3ede9;
+color:#3a2e2e;
+padding-bottom:80px;
+}
 
 header{
 background:linear-gradient(135deg,#e7c7c7,#e6d5c9);
@@ -25,81 +31,64 @@ letter-spacing:3px;
 
 .section{
 padding:60px 20px;
-max-width:1200px;
+max-width:1000px;
 margin:auto;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
 }
 
 .card{
 background:white;
 border-radius:20px;
 overflow:hidden;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s ease;
 }
 
-.card:hover{transform:translateY(-6px)}
+.card:hover{
+transform:translateY(-6px);
+}
 
 .card img{
 width:100%;
-height:300px;
+height:320px;
 object-fit:cover;
-}
-
-.gallery{
-display:flex;
-gap:6px;
-justify-content:center;
-flex-wrap:wrap;
-padding:10px;
-}
-
-.gallery img{
-width:55px;
-height:55px;
-object-fit:cover;
-border-radius:8px;
-cursor:pointer;
-border:2px solid #eee;
-}
-
-.gallery img:hover{
-border:2px solid #c6a75e;
 }
 
 .card-content{
-padding:20px;
+padding:25px;
 text-align:center;
 }
 
 .brand{
 font-size:12px;
 color:#c6a75e;
-margin:6px 0;
+margin:8px 0;
 font-weight:600;
 }
 
 .size{
 display:inline-block;
-padding:6px 14px;
+padding:6px 16px;
 border:1px solid #c6a75e;
 border-radius:20px;
 font-size:14px;
-margin:6px 0;
+margin:8px 0;
 }
 
 button{
-margin-top:10px;
-padding:8px 18px;
+margin-top:12px;
+padding:8px 20px;
 border-radius:30px;
 border:1px solid #c6a75e;
 background:white;
 cursor:pointer;
+font-size:14px;
+transition:0.3s;
 }
 
 button:hover{
@@ -109,7 +98,7 @@ color:white;
 
 .price{
 color:#c6a75e;
-margin-top:10px;
+margin-top:12px;
 font-weight:600;
 }
 </style>
@@ -124,9 +113,9 @@ font-weight:600;
 <section class="section">
 <div class="grid">
 
-<!-- KSB-01 -->
+<!-- PRODUCT 1 -->
 <div class="card">
-<img src="20250307_213805.jpg">
+<img src="20250307_213805.jpg" alt="KSB-01 Heels">
 <div class="card-content">
 <h3>KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
 <div class="brand">Brand: Kayina</div>
@@ -136,9 +125,9 @@ font-weight:600;
 </div>
 </div>
 
-<!-- KSB-02 -->
+<!-- PRODUCT 2 -->
 <div class="card">
-<img src="20250307_215307.jpg">
+<img src="20250307_215307.jpg" alt="KSB-02 Sneakers">
 <div class="card-content">
 <h3>KSB-02 | Neon Velocity Luxe Runners</h3>
 <div class="brand">Brand: PUMA</div>
@@ -148,60 +137,15 @@ font-weight:600;
 </div>
 </div>
 
-<!-- KSB-03 -->
-<div class="card">
-<img id="p3" src="ksb03-1.jpg">
-<div class="gallery">
-<img src="ksb03-1.jpg" onclick="change('p3','ksb03-1.jpg')">
-<img src="ksb03-2.jpg" onclick="change('p3','ksb03-2.jpg')">
-<img src="ksb03-3.jpg" onclick="change('p3','ksb03-3.jpg')">
-<img src="ksb03-4.jpg" onclick="change('p3','ksb03-4.jpg')">
-<img src="ksb03-5.jpg" onclick="change('p3','ksb03-5.jpg')">
-<img src="ksb03-6.jpg" onclick="change('p3','ksb03-6.jpg')">
-<img src="ksb03-7.jpg" onclick="change('p3','ksb03-7.jpg')">
-<img src="ksb03-8.jpg" onclick="change('p3','ksb03-8.jpg')">
-</div>
-<div class="card-content">
-<h3>KSB-03 | Savana Sculpt Luxe Leggings</h3>
-<div class="brand">Brand: Calzedonia</div>
-<div class="size">Size: S/M</div>
-<button onclick="order('KSB-03')">Select Product</button>
-<div class="price">€ | $ | £ — DM for price</div>
-</div>
-</div>
-
-<!-- KSB-04 -->
-<div class="card">
-<img id="p4" src="ksb04-1.jpg">
-<div class="gallery">
-<img src="ksb04-1.jpg" onclick="change('p4','ksb04-1.jpg')">
-<img src="ksb04-2.jpg" onclick="change('p4','ksb04-2.jpg')">
-<img src="ksb04-3.jpg" onclick="change('p4','ksb04-3.jpg')">
-<img src="ksb04-4.jpg" onclick="change('p4','ksb04-4.jpg')">
-<img src="ksb04-5.jpg" onclick="change('p4','ksb04-5.jpg')">
-<img src="ksb04-6.jpg" onclick="change('p4','ksb04-6.jpg')">
-<img src="ksb04-7.jpg" onclick="change('p4','ksb04-7.jpg')">
-<img src="ksb04-8.jpg" onclick="change('p4','ksb04-8.jpg')">
-<img src="ksb04-9.jpg" onclick="change('p4','ksb04-9.jpg')">
-<img src="ksb04-10.jpg" onclick="change('p4','ksb04-10.jpg')">
-<img src="ksb04-11.jpg" onclick="change('p4','ksb04-11.jpg')">
-</div>
-<div class="card-content">
-<h3>KSB-04 | Elevate StormShield Kids Jacket</h3>
-<div class="brand">Brand: Elevate</div>
-<div class="size">Size: Kids / XS / S</div>
-<button onclick="order('KSB-04')">Select Product</button>
-<div class="price">€ | $ | £ — DM for price</div>
-</div>
-</div>
-
 </div>
 </section>
 
 <script>
-function change(id,src){document.getElementById(id).src=src}
 function order(code){
-window.open("https://wa.me/36708856190?text=Hello KOSABE, I want to order product code "+code,"_blank")
+window.open(
+"https://wa.me/36708856190?text=Hello KOSABE, I want to order product code " + code,
+"_blank"
+);
 }
 </script>
 
