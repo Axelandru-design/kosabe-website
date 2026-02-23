@@ -1,0 +1,55 @@
+backend:
+  name: github
+  repo: Axelandru-design/kosabe-website
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Product Code (Internal)", name: "code", widget: "string" }
+      - { label: "Product Name", name: "title", widget: "string" }
+      - { label: "Brand", name: "brand", widget: "string" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Size", name: "size", widget: "string" }
+      - label: "Stock"
+        name: "stock"
+        widget: "select"
+        options:
+          - { label: "One Stock", value: "one" }
+          - { label: "Just a Few Left", value: "few" }
+          - { label: "Out of Stock", value: "out" }
+      - { label: "Price (Optional)", name: "price", widget: "string", required: false }
+      - { label: "Description (Optional)", name: "description", widget: "text", required: false }
+      - { label: "Images", name: "images", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+
+  - name: "settings"
+    label: "Contact Settings"
+    files:
+      - label: "Contact Information"
+        name: "contact"
+        file: "content/settings/contact.yml"
+        fields:
+          - label: "WhatsApp Numbers"
+            name: "whatsapp"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Phone Number", name: "number", widget: "string" }
+
+          - label: "Emails"
+            name: "emails"
+            widget: "list"
+            field: { label: "Email", name: "email", widget: "string" }
+
+          - label: "Facebook Links"
+            name: "facebook"
+            widget: "list"
+            field: { label: "Facebook URL", name: "url", widget: "string" }
