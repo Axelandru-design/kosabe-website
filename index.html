@@ -3,18 +3,19 @@ layout: default
 ---
 
 <div class="products">
+  {% for product in site.products %}
+  <div class="card">
+    {% if product.images %}
+      <img src="{{ product.images[0] | relative_url }}" alt="{{ product.title }}">
+    {% endif %}
 
-{% for product in site.products %}
-<div class="card {{ product.category | downcase }}">
-  <div class="card-content">
-    <div class="category">{{ product.category }}</div>
-    <h3>{{ product.code }} | {{ product.title }}</h3>
-    <div class="brand">Brand: {{ product.brand }}</div>
-    <div class="size">Size: {{ product.size }}</div>
-    <button>Select Product</button>
-    <div class="price">€ | $ | £ — DM for price</div>
+    <h3>{{ product.title }}</h3>
+    <div>Brand: {{ product.brand }}</div>
+    <div>Size: {{ product.size }}</div>
+
+    <button onclick="order('{{ product.code }}')">Select Product</button>
+
+    <div class="price">€ | $ | £ – DM for price</div>
   </div>
-</div>
-{% endfor %}
-
+  {% endfor %}
 </div>
