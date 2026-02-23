@@ -11,43 +11,177 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Poppins',sans-serif;background:#fff8f5;color:#3a2e2e;padding-bottom:90px}
 
-nav{position:fixed;top:0;left:0;width:100%;background:white;padding:10px 0;box-shadow:0 2px 10px rgba(0,0,0,0.05);z-index:1000;text-align:center}
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:12px 0;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+text-align:center;
+}
 
-.filter-btn{background:none;border:1px solid #c6a75e;padding:6px 16px;margin:0 5px;border-radius:20px;cursor:pointer;font-size:14px;transition:all 0.3s ease}
+.filter-btn{
+background:none;
+border:1px solid #c6a75e;
+padding:6px 16px;
+margin:0 5px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+transition:all 0.3s ease;
+}
 .filter-btn:hover{background:#c6a75e;color:white}
 
-header{background:linear-gradient(135deg,#f6c1cf,#e8d8c3);padding:120px 20px 80px;text-align:center}
-header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px}
+header{
+background:linear-gradient(135deg,#f6c1cf,#e8d8c3);
+padding:120px 20px 80px;
+text-align:center;
+}
 
-.section{padding:60px 20px;max-width:1100px;margin:auto}
-.section h2{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:40px;text-align:center}
+header h1{
+font-family:'Playfair Display',serif;
+font-size:42px;
+letter-spacing:3px;
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.section{
+padding:60px 20px;
+max-width:1200px;
+margin:auto;
+}
 
-.card{background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,0.08);transition:0.3s;position:relative}
+.section h2{
+font-family:'Playfair Display',serif;
+font-size:30px;
+margin-bottom:40px;
+text-align:center;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
 .card:hover{transform:translateY(-8px)}
 
-.card img{width:100%;height:300px;object-fit:cover}
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
 
-.brand{display:block;margin-top:6px;font-size:12px;letter-spacing:1px;color:#c6a75e;font-weight:600}
+.gallery-thumbs{
+display:flex;
+gap:6px;
+justify-content:center;
+margin-top:10px;
+flex-wrap:wrap;
+}
+.gallery-thumbs img{
+width:55px;
+height:55px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+border:2px solid #eee;
+transition:all 0.3s ease;
+}
+.gallery-thumbs img:hover{
+border:2px solid #c6a75e;
+transform:scale(1.05);
+}
 
-.card-content{padding:20px;text-align:center}
+.card-content{
+padding:20px;
+text-align:center;
+}
 
-.size-single{display:inline-block;padding:6px 14px;margin-top:6px;border:1px solid #c6a75e;border-radius:20px;font-size:14px}
+.brand{
+display:block;
+margin-top:6px;
+font-size:12px;
+letter-spacing:1px;
+color:#c6a75e;
+font-weight:600;
+}
 
-.select-product{margin-top:12px;padding:8px 18px;border-radius:30px;border:1px solid #c6a75e;background:white;cursor:pointer;font-size:14px;transition:all 0.3s ease}
-.select-product:hover{background:#c6a75e;color:white;box-shadow:0 0 10px rgba(198,167,94,0.6)}
+.size-single{
+display:inline-block;
+padding:6px 14px;
+margin-top:6px;
+border:1px solid #c6a75e;
+border-radius:20px;
+font-size:14px;
+}
 
-.price{color:#c6a75e;font-weight:600;margin-top:10px}
+.select-product{
+margin-top:12px;
+padding:8px 18px;
+border-radius:30px;
+border:1px solid #c6a75e;
+background:white;
+cursor:pointer;
+font-size:14px;
+transition:all 0.3s ease;
+}
+.select-product:hover{
+background:#c6a75e;
+color:white;
+box-shadow:0 0 10px rgba(198,167,94,0.6);
+}
 
-.gallery-thumbs{display:flex;gap:6px;justify-content:center;margin-top:10px;flex-wrap:wrap}
-.gallery-thumbs img{width:55px;height:55px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid #eee;transition:all 0.3s ease}
-.gallery-thumbs img:hover{border:2px solid #c6a75e;transform:scale(1.05)}
+.price{
+color:#c6a75e;
+font-weight:600;
+margin-top:10px;
+}
 
-.sticky-order{position:fixed;bottom:0;left:0;width:100%;background:#3a2e2e;padding:12px;text-align:center;z-index:999}
-.sticky-order a{background:linear-gradient(135deg,#c6a75e,#d8b76a);color:white;padding:10px 25px;border-radius:40px;text-decoration:none}
+.sticky-order{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#3a2e2e;
+padding:12px;
+text-align:center;
+z-index:999;
+}
+.sticky-order a{
+background:linear-gradient(135deg,#c6a75e,#d8b76a);
+color:white;
+padding:10px 25px;
+border-radius:40px;
+text-decoration:none;
+}
 
-.floating-whatsapp{position:fixed;right:20px;bottom:90px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 15px rgba(0,0,0,0.3);z-index:1000;text-decoration:none;font-size:28px;color:white}
+.floating-whatsapp{
+position:fixed;
+right:20px;
+bottom:90px;
+width:60px;
+height:60px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+z-index:1000;
+text-decoration:none;
+font-size:28px;
+color:white;
+}
 </style>
 </head>
 <body>
@@ -69,9 +203,9 @@ header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px
 <h2>Collection</h2>
 <div class="grid">
 
-<!-- HEELS -->
+<!-- KSB-01 HEELS -->
 <div class="card heels">
-<img id="ksb01-main" src="20250307_213805.jpg">
+<img src="20250307_213805.jpg">
 <div class="card-content">
 <h3 data-code="KSB-01">KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
 <div class="brand">Brand: Kayina</div>
@@ -81,9 +215,9 @@ header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px
 </div>
 </div>
 
-<!-- SNEAKERS -->
+<!-- KSB-02 SNEAKERS -->
 <div class="card sneakers">
-<img id="ksb02-main" src="20250307_215307.jpg">
+<img src="20250307_215307.jpg">
 <div class="card-content">
 <h3 data-code="KSB-02">KSB-02 | Neon Velocity Luxe Runners</h3>
 <div class="brand">Brand: PUMA</div>
@@ -93,7 +227,7 @@ header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px
 </div>
 </div>
 
-<!-- ANIMAL LEGGINGS -->
+<!-- KSB-03 LEGGINGS -->
 <div class="card leggings">
 <img id="ksb03-main" src="ksb03-1.webp">
 <div class="gallery-thumbs">
@@ -115,58 +249,6 @@ header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px
 </div>
 </div>
 
-<!-- JACKET -->
-<div class="card jackets">
-<img id="ksb04-main" src="ksb04-black-1.jpg">
-<div class="gallery-thumbs">
-<img src="ksb04-black-1.jpg" onclick="changeImage('ksb04-main','ksb04-black-1.jpg')">
-<img src="ksb04-black-2.jpg" onclick="changeImage('ksb04-main','ksb04-black-2.jpg')">
-<img src="ksb04-black-3.jpg" onclick="changeImage('ksb04-main','ksb04-black-3.jpg')">
-<img src="ksb04-black-4.jpg" onclick="changeImage('ksb04-main','ksb04-black-4.jpg')">
-<img src="ksb04-orange-1.jpg" onclick="changeImage('ksb04-main','ksb04-orange-1.jpg')">
-<img src="ksb04-orange-2.jpg" onclick="changeImage('ksb04-main','ksb04-orange-2.jpg')">
-<img src="ksb04-orange-3.jpg" onclick="changeImage('ksb04-main','ksb04-orange-3.jpg')">
-<img src="ksb04-orange-4.jpg" onclick="changeImage('ksb04-main','ksb04-orange-4.jpg')">
-<img src="ksb04-orange-5.jpg" onclick="changeImage('ksb04-main','ksb04-orange-5.jpg')">
-<img src="ksb04-orange-6.jpg" onclick="changeImage('ksb04-main','ksb04-orange-6.jpg')">
-<img src="ksb04-orange-7.jpg" onclick="changeImage('ksb04-main','ksb04-orange-7.jpg')">
-</div>
-<div class="card-content">
-<h3 data-code="KSB-04">KSB-04 | Elevate StormShield Kids Jacket</h3>
-<div class="brand">Brand: Elevate</div>
-<div class="size-single">Size: Kids / XS / S</div>
-<button class="select-product">Select Product</button>
-<div class="price">€ | $ | £ — DM for price</div>
-</div>
-</div>
-
-<!-- FLORAL PUSH-UP -->
-<div class="card leggings">
-<img id="ksb05-main" src="ksb05-beige-1.jpg">
-<div class="gallery-thumbs">
-<img src="ksb05-beige-1.jpg" onclick="changeImage('ksb05-main','ksb05-beige-1.jpg')">
-<img src="ksb05-beige-2.jpg" onclick="changeImage('ksb05-main','ksb05-beige-2.jpg')">
-<img src="ksb05-beige-3.jpg" onclick="changeImage('ksb05-main','ksb05-beige-3.jpg')">
-<img src="ksb05-grey-1.jpg" onclick="changeImage('ksb05-main','ksb05-grey-1.jpg')">
-<img src="ksb05-grey-2.jpg" onclick="changeImage('ksb05-main','ksb05-grey-2.jpg')">
-<img src="ksb05-grey-3.jpg" onclick="changeImage('ksb05-main','ksb05-grey-3.jpg')">
-<img src="ksb05-grey-4.jpg" onclick="changeImage('ksb05-main','ksb05-grey-4.jpg')">
-<img src="ksb05-blue-1.jpg" onclick="changeImage('ksb05-main','ksb05-blue-1.jpg')">
-<img src="ksb05-blue-2.jpg" onclick="changeImage('ksb05-main','ksb05-blue-2.jpg')">
-<img src="ksb05-blue-3.jpg" onclick="changeImage('ksb05-main','ksb05-blue-3.jpg')">
-<img src="ksb05-blue-4.jpg" onclick="changeImage('ksb05-main','ksb05-blue-4.jpg')">
-<img src="ksb05-blue-5.jpg" onclick="changeImage('ksb05-main','ksb05-blue-5.jpg')">
-<img src="ksb05-blue-6.jpg" onclick="changeImage('ksb05-main','ksb05-blue-6.jpg')">
-</div>
-<div class="card-content">
-<h3 data-code="KSB-05">KSB-05 | Calzedonia Push-Up Floral Leggings</h3>
-<div class="brand">Brand: Calzedonia</div>
-<div class="size-single">Size: S / M / L</div>
-<button class="select-product">Select Product</button>
-<div class="price">€ | $ | £ — DM for price</div>
-</div>
-</div>
-
 </div>
 </section>
 
@@ -177,7 +259,9 @@ header h1{font-family:'Playfair Display',serif;font-size:42px;letter-spacing:3px
 </div>
 
 <script>
-function changeImage(mainId,newSrc){document.getElementById(mainId).src=newSrc}
+function changeImage(mainId,newSrc){
+document.getElementById(mainId).src=newSrc;
+}
 function filterCategory(category){
 const cards=document.querySelectorAll('.card');
 cards.forEach(card=>{
