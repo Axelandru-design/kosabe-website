@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KOSABE | Luxury Soft Glam Fashion</title>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f3ede9;
+color:#3a2e2e;
+padding-bottom:80px;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:white;
+padding:12px 0;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
+z-index:1000;
+text-align:center;
+}
+
+.filter-btn{
+background:none;
+border:1px solid #c6a75e;
+padding:6px 16px;
+margin:0 5px;
+border-radius:20px;
+cursor:pointer;
+font-size:14px;
+transition:0.3s;
+}
+
+.filter-btn:hover{
+background:#c6a75e;
+color:white;
+}
+
+header{
+background:linear-gradient(135deg,#e7c7c7,#e6d5c9);
+padding:140px 20px 70px;
+text-align:center;
+}
+
+header h1{
+font-family:'Playfair Display',serif;
+font-size:42px;
+letter-spacing:3px;
+}
+
+.section{
+padding:60px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:60px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.gallery{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:15px;
+scroll-behavior:smooth;
+}
+
+.gallery img{
+height:320px;
+border-radius:12px;
+}
+
+.card-content{
+padding:25px;
+text-align:center;
+}
+
+.category{
+font-size:11px;
+letter-spacing:1px;
+color:#999;
+margin-bottom:6px;
+}
+
+.brand{
+font-size:12px;
+color:#c6a75e;
+margin:8px 0;
+font-weight:600;
+}
+
+.size{
+display:inline-block;
+padding:6px 16px;
+border:1px solid #c6a75e;
+border-radius:20px;
+font-size:14px;
+margin:8px 0;
+}
+
+button{
+margin-top:12px;
+padding:8px 20px;
+border-radius:30px;
+border:1px solid #c6a75e;
+background:white;
+cursor:pointer;
+font-size:14px;
+transition:0.3s;
+}
+
+button:hover{
+background:#c6a75e;
+color:white;
+}
+
+.price{
+color:#c6a75e;
+margin-top:12px;
+font-weight:600;
+}
+</style>
+</head>
+<body>
+
+<nav>
+<button class="filter-btn" onclick="filterProducts('all')">All</button>
+<button class="filter-btn" onclick="filterProducts('heels')">Heels</button>
+<button class="filter-btn" onclick="filterProducts('sneakers')">Sneakers</button>
+<button class="filter-btn" onclick="filterProducts('pants')">Pants</button>
+</nav>
+
+<header>
+<h1>KOSABE</h1>
+<p>Luxury Soft Glam Feminine Fashion</p>
+</header>
+
+<section class="section">
+<div class="grid">
+
+<!-- KSB-01 HEELS -->
+<div class="card heels">
+<div class="gallery">
+<img src="20250307_213805.jpg">
+<img src="20250307_213833.jpg">
+<img src="20250307_213903.jpg">
+<img src="20250307_213920.jpg">
+<img src="20250307_213927.jpg">
+<img src="20250307_213942.jpg">
+<img src="20250307_214002.jpg">
+</div>
+<div class="card-content">
+<div class="category">HEELS</div>
+<h3>KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
+<div class="brand">Brand: Kayina</div>
+<div class="size">Size: 40/41</div>
+<button onclick="order('KSB-01')">Select Product</button>
+<div class="price">€ | $ | £ — DM for price</div>
+</div>
+</div>
+
+<!-- KSB-02 SNEAKERS -->
+<div class="card sneakers">
+<div class="gallery">
+<img src="20250307_215307.jpg">
+<img src="20250307_215323.jpg">
+<img src="20250307_215345.jpg">
+<img src="20250307_215357.jpg">
+<img src="20250307_215407.jpg">
+<img src="20250307_215422.jpg">
+<img src="20250307_215435.jpg">
+<img src="20250307_215450.jpg">
+</div>
+<div class="card-content">
+<div class="category">SNEAKERS</div>
+<h3>KSB-02 | Neon Velocity Luxe Runners</h3>
+<div class="brand">Brand: PUMA</div>
+<div class="size">Size: 35/36</div>
+<button onclick="order('KSB-02')">Select Product</button>
+<div class="price">€ | $ | £ — DM for price</div>
+</div>
+</div>
+
+<!-- KSB-03 PANTS -->
+<div class="card pants">
+<div class="gallery">
+<img src="ksb03-1.jpg">
+<img src="ksb03-2.jpg">
+<img src="ksb03-3.jpg">
+<img src="ksb03-4.jpg">
+<img src="ksb03-5.jpg">
+<img src="ksb03-6.jpg">
+<img src="ksb03-7.jpg">
+<img src="ksb03-8.jpg">
+</div>
+<div class="card-content">
+<div class="category">PANTS</div>
+<h3>KSB-03 | ÉCLIPSE ROYALE Ultra Glam Square Couture</h3>
+<div class="brand">Brand: Reebok</div>
+<div class="size">Size: XS/M</div>
+<button onclick="order('KSB-03')">Select Product</button>
+<div class="price">€ | $ | £ — DM for price</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<script>
+function order(code){
+window.open(
+"https://wa.me/36708856190?text=Hello KOSABE, I want to order product code " + code,
+"_blank"
+);
+}
+
+function filterProducts(category){
+const cards = document.querySelectorAll('.card');
+cards.forEach(card=>{
+if(category === 'all'){
+card.style.display = "block";
+} else {
+card.style.display = card.classList.contains(category) ? "block" : "none";
+}
+});
+}
+</script>
+{{ content }}
+</body>
+</html>
