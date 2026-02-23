@@ -1,0 +1,11 @@
+title: Kosabe
+description: Kosabe Lifestyle Store
+baseurl: "/kosabe-website"
+url: "https://axelandru-design.github.io"
+
+collections:
+  products:
+    output: true
+    permalink: /products/:name/
+
+markdown: kramdown
