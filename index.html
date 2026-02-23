@@ -59,14 +59,14 @@ letter-spacing:3px;
 
 .section{
 padding:60px 20px;
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:40px;
+grid-template-columns:1fr;
+gap:60px;
 }
 
 .card{
@@ -74,17 +74,19 @@ background:white;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:0.3s ease;
 }
 
-.card:hover{
-transform:translateY(-6px);
+.gallery{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:15px;
+scroll-behavior:smooth;
 }
 
-.card img{
-width:100%;
+.gallery img{
 height:320px;
-object-fit:cover;
+border-radius:12px;
 }
 
 .card-content{
@@ -156,7 +158,15 @@ font-weight:600;
 
 <!-- KSB-01 HEELS -->
 <div class="card heels">
-<img src="20250307_213805.jpg" alt="KSB-01 Heels">
+<div class="gallery">
+<img src="20250307_213805.jpg">
+<img src="20250307_213833.jpg">
+<img src="20250307_213903.jpg">
+<img src="20250307_213920.jpg">
+<img src="20250307_213927.jpg">
+<img src="20250307_213942.jpg">
+<img src="20250307_214002.jpg">
+</div>
 <div class="card-content">
 <div class="category">HEELS</div>
 <h3>KSB-01 | Obsidian Éclipse Sculpted Platforms</h3>
@@ -169,13 +179,44 @@ font-weight:600;
 
 <!-- KSB-02 SNEAKERS -->
 <div class="card sneakers">
-<img src="20250307_215307.jpg" alt="KSB-02 Sneakers">
+<div class="gallery">
+<img src="20250307_215307.jpg">
+<img src="20250307_215323.jpg">
+<img src="20250307_215345.jpg">
+<img src="20250307_215357.jpg">
+<img src="20250307_215407.jpg">
+<img src="20250307_215422.jpg">
+<img src="20250307_215435.jpg">
+<img src="20250307_215450.jpg">
+</div>
 <div class="card-content">
 <div class="category">SNEAKERS</div>
 <h3>KSB-02 | Neon Velocity Luxe Runners</h3>
 <div class="brand">Brand: PUMA</div>
 <div class="size">Size: 35/36</div>
 <button onclick="order('KSB-02')">Select Product</button>
+<div class="price">€ | $ | £ — DM for price</div>
+</div>
+</div>
+
+<!-- KSB-03 HEELS -->
+<div class="card heels">
+<div class="gallery">
+<img src="ksb03-1.jpg">
+<img src="ksb03-2.jpg">
+<img src="ksb03-3.jpg">
+<img src="ksb03-4.jpg">
+<img src="ksb03-5.jpg">
+<img src="ksb03-6.jpg">
+<img src="ksb03-7.jpg">
+<img src="ksb03-8.jpg">
+</div>
+<div class="card-content">
+<div class="category">HEELS</div>
+<h3>KSB-03 | Midnight Sculpted Gold Heels</h3>
+<div class="brand">Brand: Kayina</div>
+<div class="size">Size: 39/40</div>
+<button onclick="order('KSB-03')">Select Product</button>
 <div class="price">€ | $ | £ — DM for price</div>
 </div>
 </div>
