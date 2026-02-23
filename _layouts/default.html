@@ -2,96 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f3ede9;
-      color: #3a2e2e;
-      padding: 40px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 40px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
       text-align: center;
     }
 
+    h1 {
+      margin-top: 40px;
+    }
+
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
     }
 
     .card {
       background: white;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-      transition: 0.3s ease;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: left;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .category {
-      font-size: 12px;
-      letter-spacing: 1px;
-      margin-bottom: 10px;
-      opacity: 0.6;
-    }
-
-    .brand, .size {
-      font-size: 14px;
-      margin-bottom: 6px;
+    .card img {
+      width: 100%;
+      border-radius: 8px;
     }
 
     .price {
-      margin-top: 12px;
-      font-weight: 500;
+      font-weight: bold;
+      margin-top: 10px;
     }
 
     button {
-      margin-top: 12px;
-      padding: 10px 16px;
-      border: none;
+      margin-top: 10px;
+      padding: 8px 12px;
       background: black;
       color: white;
-      border-radius: 6px;
+      border: none;
       cursor: pointer;
+      border-radius: 4px;
     }
 
     button:hover {
-      opacity: 0.85;
+      background: #333;
     }
   </style>
 </head>
 
 <body>
 
-<h1>{{ site.title }}</h1>
+  <h1>{{ site.title }}</h1>
 
-{{ content }}
+  {{ content }}
 
-<script>
-  function order(code) {
-    window.open(
-      "https://wa.me/36708856190?text=Hello KOSABE, I want to order product code " + code,
-      "_blank"
-    );
-  }
-</script>
+  <script>
+    function order(code){
+      window.open(
+        "https://wa.me/36708856190?text=Hello KOSABE, I want to order product code " + code,
+        "_blank"
+      );
+    }
+  </script>
 
 </body>
 </html>
