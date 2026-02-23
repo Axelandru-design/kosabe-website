@@ -28,8 +28,8 @@ collections:
         name: "stock"
         widget: "select"
         options:
-          - { label: "One Stock", value: "one" }
-          - { label: "Just a Few Left", value: "few" }
+          - { label: "In Stock", value: "one" }
+          - { label: "Last chance - Just a few left", value: "few" }
           - { label: "Out of Stock", value: "out" }
       - { label: "Price (Optional)", name: "price", widget: "string", required: false }
       - { label: "Description (Optional)", name: "description", widget: "text", required: false }
